@@ -1,12 +1,26 @@
 
 @import "variables";
 @import "bootstrap";
+@import "map";
 @import "video";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,900;1,400&family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
 
 // merriweather for f
 
 /* Custom styles */
 
-$headings-font-family: 'Poppins, sans-serif'
+
+main {
+    background-color: black;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+// $headings-font-family: 'Merriweather, sans-serif;
+
+:root {
+    --bs-body-font-family: "Merriweather, serif";
+}

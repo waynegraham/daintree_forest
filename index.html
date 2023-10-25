@@ -4,18 +4,10 @@ title: Daintree Forest
 subtitle: A Walk
 ---
 
+<div id="map"></div>
+<div id="mapInset"></div>
+<div id="story"></div>
 
-
-<script>
-let config = {
-    style: '{{ site.mapbox_style }}',
-    accessToken: '{{ site.mapbox_access_token }}',
-    showMarkers: false,
-    theme: 'dark',
-    use3dTerrain: true,
-    title: '{{ page.title }}'
-    subtitle: '{{ page.subtitle }}'
-}
-
-console.log('config', config);
-</script>
+<script src="{{ '/assets/js/config.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/slides.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/chart.js' | relative_url }}"></script>
