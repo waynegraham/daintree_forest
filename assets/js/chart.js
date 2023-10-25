@@ -53,7 +53,7 @@ const data = {
 const options = {
   title: {
     display: true,
-    text: 'Cretaceous Period Dinosaurs',
+    text: 'Cretaceous Period',
   },
 };
 
