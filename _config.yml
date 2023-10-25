@@ -4,6 +4,8 @@ url: https:/waynegraham.githbu.io/daintree
 repository: waynegraham/daintree
 baseurl: "/daintree"
 
+destination: docs/
+
 permalink: pretty
 
 # Mapbox settings
