@@ -1,9 +1,12 @@
 
 @import "variables";
 @import "bootstrap";
+@import "video";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&&display=swap');
 
+// merriweather for f
 
 /* Custom styles */
 
-html { color: red; }
+$headings-font-family: 'Poppins, sans-serif'

@@ -3,32 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <title>{{ page.title }}</title>
 
-    <title>{{ site.title }}</title>
+    <link rel="canonical" href="{{ site.url }}" />
 
-    <link rel="canonical" href="https://working-groups.diglib.org/" />
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
+    <link rel="icon" href="{{'/assets/img/favicons/favicon.ico' | relative_url }}" />
+    
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+    <script src="https://unpkg.com/intersection-observer@0.12.2/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
 
-    <link rel="icon" href="{{'/assets/img/favicons/favicon.ico' | url }}" />
     <meta name="theme-color" content="#712cf9" />
   </head>
   <body>
-    <div class="col-lg-8 mx-auto p-4 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <a
-          href="/"
-          class="d-flex align-items-center text-body-emphasis text-decoration-none"
-        >
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-          </svg>
-          <span class="fs-4">Starter template</span>
-        </a>
-      </header>
-
       <main>
         {{ content }}
       </main>

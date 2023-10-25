@@ -36,5 +36,7 @@
 // Import Bootstrap Icons w/ custom path to fonts folder
 //
 
-$bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
-@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
+// $bootstrap-icons-font-dir: "../node_modules/bootstrap-icons/font/fonts";
+// @import "../node_modules/bootstrap-icons/font/bootstrap-icons";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");

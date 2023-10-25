@@ -1,0 +1,36 @@
+title: Daintree Forest
+description: Daintree Mockup
+url: https:/waynegraham.githbu.io/daintree
+repository: waynegraham/daintree
+baseurl: "/daintree"
+
+permalink: pretty
+
+# Mapbox settings
+mapbox_access_token: pk.eyJ1Ijoid3NnNHciLCJhIjoiTVd4cXdScyJ9.ypK9cLCVFReavCn9b_hhWQ
+mapbox_style: mapbox://styles/wsg4w/cl3q44jkp003k15nt3ii5e8o5
+
+# Google Analytics Tracking (optional)
+# Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
+# Note: the main Just the Docs site does *not* use Google Analytics.
+# ga_tracking: UA-2709176-10,G-5FG1HLH3XQ
+# ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+
+exclude:
+# from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+

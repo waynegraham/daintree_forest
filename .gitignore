@@ -19,3 +19,4 @@ vendor/
 # We use Stylelint and Prettier, JavaScript tools, to lint and format our own code.
 # We use Node.js as our runtime, so we ignore node_modules
 node_modules
+.env
