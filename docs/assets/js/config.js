@@ -103,7 +103,7 @@ var config = {
             alignment: 'center',
             hidden: false,
             // title: '',
-            image: '/daintree/assets/img/cretaceous.jpg',
+            image: '/daintree_forest/assets/img/cretaceous.jpg',
             description: '<p class="mt-3">This forest&ndash; 120 million years. Protected, so our touch is slight. Look again: mosses springing void our step as if we are not here. </p>',
 
         },
@@ -112,7 +112,7 @@ var config = {
             alignment: 'center',
             hidden: false,
             // title: 'Third Title',
-            image: '/daintree/assets/marco-marques-dJ_Zl5LpPto-unsplash.jpg',
+            image: '/daintree_forest/assets/marco-marques-dJ_Zl5LpPto-unsplash.jpg',
             description: '<p class="mt-3">Ancestor trees conjured seeds when dinosaurs&ndash;</p>',
             location: {
                 center: [145.17725, -16.33494],
@@ -131,7 +131,7 @@ var config = {
             alignment: 'fully',
             hidden: false,
             // title: 'fourth Title',
-            // image: '/daintree/assets/img/leon-andov-f7isN80IXik-unsplash.jpg',
+            // image: '/daintree_forest/assets/img/leon-andov-f7isN80IXik-unsplash.jpg',
             video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/qSm93-hhZGg?si=3yJsPRAu9EyawGKB&amp;start=151&rel=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
             description: '<p class="mt-3">Yes. Out of time, the yellow robins, fairywrens. Honeyeaters at their promiscuous bloom.</p><p>If we do not act?</p>',
             location: {
@@ -151,7 +151,7 @@ var config = {
             alignment: 'fully',
             hidden: false,
             // title: 'fourth Title',
-            image: '/daintree/assets/img/zac-porter-tzA9aoQxp_8-unsplash.jpg',
+            image: '/daintree_forest/assets/img/zac-porter-tzA9aoQxp_8-unsplash.jpg',
             description: '<p class="mt-3"> Here is a past so deep our mind meanders to an airy thinness where thoughts cannot form, a phantom rustle.</p>',
             location: {
                 center: [145.17725, -16.33494],
@@ -170,7 +170,7 @@ var config = {
             alignment: 'fully',
             hidden: false,
             // title: 'fourth Title',
-            image: '/daintree/assets/img/leon-andov-f7isN80IXik-unsplash.jpg',
+            image: '/daintree_forest/assets/img/leon-andov-f7isN80IXik-unsplash.jpg',
             description: '<p class="mt-3">Our choice: this scape may surge and recompass a new world, so warm and damp persistently.  Stand by the ribbonwood, the languorous palm, imagine the quiet roll of eon upon eon come and gone; now look again, identical: the future.</p>',
             chart: 'timeline',
             location: {
@@ -190,7 +190,7 @@ var config = {
             alignment: 'fully',
             hidden: false,
             // title: 'fourth Title',
-            image: '/daintree/assets/img/hamish-weir-q8Jb1md-8k8-unsplash.jpg',
+            image: '/daintree_forest/assets/img/hamish-weir-q8Jb1md-8k8-unsplash.jpg',
             chart: 'cretaceous',
             description: '<p class="mt-3">You and I a momentary seam and slightest fiction. Before we were and after this is.</p>',
             location: {
@@ -210,7 +210,7 @@ var config = {
             alignment: 'fully',
             hidden: false,
             // title: 'fourth Title',
-            image: '/daintree/assets/img/pat-whelen-KaVnAG3BLqc-unsplash.jpg',
+            image: '/daintree_forest/assets/img/pat-whelen-KaVnAG3BLqc-unsplash.jpg',
             description: '<p class="mt-3">A trail.</p><p>The foot path to Mt. Sorrow. From there the shore, its azure slap primeval, and beneath that fulsome round a bygone adumbration stirs, till human voices wake it, and we drown.</p>',
             location: {
                 center: [145.17725, -16.33494],

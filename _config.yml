@@ -1,8 +1,8 @@
 title: Daintree Forest
 description: Daintree Mockup
 url: https:/waynegraham.githbu.io/daintree
-repository: waynegraham/daintree
-baseurl: "/daintree"
+repository: waynegraham/daintree_forest
+baseurl: "/daintree_forest"
 
 destination: docs/
 
