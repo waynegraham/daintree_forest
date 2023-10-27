@@ -10,9 +10,62 @@
 
 /* Custom styles */
 
+.intro {
+    margin: 20vh auto;
+    max-width: 800px;
+    padding: 0 24px;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    max-width: calc(100% - 20px);
+    margin: 0 auto 90vh;
+    color: white;
+    font-size: 24px;
+  }
+
+  section {
+    min-height: 70vh;
+  }
+
+  .parralax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #forest {
+    background-image: url("../img/kyle-cleveland-VDPFEyIrAn0-unsplash.jpg");
+  }
+  #trail {
+    background-image: url("../img/pat-whelen-KaVnAG3BLqc-unsplash.jpg");
+  }
+
+  // https://codepen.io/nikki-peel/pen/oNLbzBZ
+  .close {
+    font-size: 1.5rem;
+  }
+  
+  .col-12 img {
+    opacity: 0.7;
+    cursor: pointer;
+    margin: 2rem;
+    width: 100%;
+  }
+  
+  .col-12 img:hover {
+    opacity: 1;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
 
 main {
-    background-color: black;
+    //background-color: black;
 }
 
 p {

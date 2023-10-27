@@ -1,0 +1,95 @@
+---
+layout: default
+title: Daintree Forest
+subtitle: A Walk
+---
+
+<style>
+  
+</style>
+<!-- 
+    https://github.com/russellsamora/scrollama 
+    https://github.com/dkaoster/scrolly-video
+
+-->
+<div class="intro">
+  <h1>Daintree Forest</h1>
+  <h2>A walk</h2>
+  <p>&ndash;by Charles Henry</p>
+</div>
+
+<div class="video-container" style="height: 300vh">
+  <div id="scrolly-video"></div>
+  <div class="card">
+    <p>We are here, a green and drowsy light.</p>
+  </div>
+  <div class="card">
+    <p>How old you think?</p>
+  </div>
+</div>
+<style>
+  
+</style>
+<section id="forest" class="parralax">
+  <div class="container">
+    <p class="fs-1 text-light">
+      This forest-- 120 million years. Protected, so our touch is slight. Look
+      again: mosses springing void our step as if we are not here.
+    </p>
+  </div>
+</section>
+
+<section id="dinosaurs" class="bg-light">
+  <div class="container">
+
+    <p>Ancestor trees conjured seeds when dinosaurs&ndash;</p>
+    <p>
+      Yes. Out of time, the yellow robins, fairywrens. Honeyeaters at their
+      promiscuous bloom.
+    </p>
+    <p>If we do not act?</p>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+
+var sankey = d3.sankey();
+console.log(sankey);
+</script>
+    <script src="{{ '/assets/js/d3-example.js' | relative_url }}"></script>
+
+    
+  </div>
+</section>
+
+<section id="" class="bg-dark text-light">
+    <div class="container">
+        <p>
+            Here is a past so deep our mind meanders to an airy thinness where thoughts cannot form, a phantom rustle.  Our choice: this scape may surge and recompass a new world, so warm and damp persistently.  Stand by the ribbonwood, the languorous palm, imagine the quiet roll of eon upon eon come and gone; now look again, identical: the future. You and I a momentary seam and slightest fiction. Before we were and after this is.
+        </p>
+
+        {% include carousel.html %}
+    </div>
+</section>
+
+<section id="trail" class="parralax">
+<div class="container text-light">
+    <p>A trail. </p>
+    <p>
+
+        The foot path to Mt. Sorrow. From there the shore, its azure slap primeval, and beneath that fulsome round a bygone adumbration stirs, till human voices wake it, and we drown. 
+        </p>
+        <p class="float-end">
+            <em>From the Pangia series Look Again.</em>
+        </p>
+</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script type="text/javascript">
+  new ScrollyVideo({
+    scrollyVideoContainer: "scrolly-video",
+    src: "{{ '/assets/video/goldengate.mp4' | relative_url }}",
+    cover: true,
+  });
+</script>
