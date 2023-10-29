@@ -8,14 +8,17 @@
 // merriweather for f
 
 /* Custom styles */
-
-.intro {
-  margin: 20vh auto;
-  max-width: 800px;
-  padding: 0 24px;
+#intro {
+  background-color: #fafafa;
 }
 
-.card {
+// .intro {
+//   margin: 20vh auto;
+//   max-width: 800px;
+//   padding: 0 24px;
+// }
+
+.card2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -77,3 +80,7 @@ p {
 :root {
   --bs-body-font-family: "Merriweather, serif";
 }
+
+$headings-font-family: "Merriweather, serif";
+$font-family-base: "Poppins,sans-serif";
+// $headings-font-family: var(--headings-font-family), var(--bs-font-sans-serif);

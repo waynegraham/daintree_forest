@@ -11986,13 +11986,11 @@ textarea.form-control-lg {
 /* Media Query for devices withi coarse pointers and no hover functionality */
 /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
 /* Custom styles */
-.intro {
-  margin: 20vh auto;
-  max-width: 800px;
-  padding: 0 24px;
+#intro {
+  background-color: #fafafa;
 }
 
-.card {
+.card2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
