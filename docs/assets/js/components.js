@@ -7,6 +7,7 @@ const divIds = ["dinosaurs"];
 
 const els = soundfiles.map((filename, index) => {
     const el = document.createElement("audio");
+    el.setAttribute('preload', 'auto'); // preload audio
     // el.src = "/" + filename;
     el.src = filename;
     document.body.appendChild(el);

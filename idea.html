@@ -10,12 +10,15 @@ subtitle: A Walk
 <!-- 
     https://github.com/russellsamora/scrollama 
     https://github.com/dkaoster/scrolly-video
+    https://www.pexels.com/search/videos/rainforest/
+    https://trvswgnr.github.io/bs5-lightbox/#installation
 
 -->
 <div class="intro">
   <h1>Daintree Forest</h1>
   <h2>A walk</h2>
   <p>&ndash;by Charles Henry</p>
+  <p><a href="#scrolly-video" class="btn btn-info"><i class="bi bi-arrow-down"></i>Click to scroll</a></p>
 </div>
 
 <div class="video-container" style="height: 300vh">
@@ -30,12 +33,16 @@ subtitle: A Walk
 <style>
   
 </style>
-<section id="forest" class="parralax">
-  <div class="container">
-    <p class="fs-1 text-light">
-      This forest-- 120 million years. Protected, so our touch is slight. Look
-      again: mosses springing void our step as if we are not here.
-    </p>
+<section id="forest" class="parralax py-5">
+  <div class="container py-lg-5">
+    <div class="row py-lg-5">
+      <div class="col py-lg-5 my-lg-5">
+      <p class="fs-1 text-light">
+        This forest-- 120 million years. Protected, so our touch is slight. Look
+        again: mosses springing void our step as if we are not here.
+      </p>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -48,6 +55,8 @@ subtitle: A Walk
       promiscuous bloom.
     </p>
     <p>If we do not act?</p>
+
+    <div id="d3-1" class="d-flex justify-content-center"></div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="{{ '/assets/js/d3-example.js' | relative_url }}"></script>
@@ -85,7 +94,7 @@ subtitle: A Walk
 <script type="text/javascript">
   new ScrollyVideo({
     scrollyVideoContainer: "scrolly-video",
-    src: "{{ '/assets/video/goldengate.mp4' | relative_url }}",
+    src: "{{ '/assets/video/cliff.mp4' | relative_url }}",
     cover: true,
   });
 </script>
