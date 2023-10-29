@@ -23,13 +23,246 @@
   </head>
   <body>
       <main>
-        <div id="map"></div>
-<div id="mapInset"></div>
-<div id="story"></div>
+        <!-- 
+    https://github.com/russellsamora/scrollama 
+    https://github.com/dkaoster/scrolly-video
+    https://www.pexels.com/search/videos/rainforest/
+    https://trvswgnr.github.io/bs5-lightbox/#installation
 
-<script src="/daintree_forest/assets/js/config.js"></script>
-<script src="/daintree_forest/assets/js/slides.js"></script>
-<script src="/daintree_forest/assets/js/chart.js"></script>
+-->
+<section id="intro" class="my-5 py-5">
+
+  <div class="container px-4 py-5 my-5">
+    <h1 class="display-5">Daintree Forest</h1>
+    <h2 class="">A Walk</h2>
+    <p>&ndash;by Charles Henry</p>
+
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Intro Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum facere excepturi, nam temporibus qui sapiente veniam animi dolore veritatis? Voluptatem itaque hic quibusdam quam sunt cum, numquam eius consequuntur!
+      </p>
+      <div class="my-5 py-5 d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="#scrolly-video">
+          <i class="bi bi-arrow-down fs-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="video-container" style="height: 300vh">
+  <div id="scrolly-video"></div>
+  <div class="card2">
+    <p>We are here, a green and drowsy light.</p>
+  </div>
+  <div class="card2">
+    <p>How old you think?</p>
+  </div>
+</div>
+
+
+<section id="forest" class="parralax py-5">
+
+  <div class="container my-5" >
+    <div class="bg-light bg-opacity-60 row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col p-3 p-lg-5 pt-lg-3">
+        <p class="lead">
+          This forest&ndash; 120 million years. Protected, so our touch is slight. Look
+          again: mosses springing void our step as if we are not here.
+        </p> 
+      </div>
+      
+    </div>
+  </div>
+<!--
+  <div class="container py-lg-5">
+    <div class="row py-lg-5">
+      <div class="col py-lg-5 my-lg-5">
+
+        <div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+
+      <p class="fs-1 text-light">
+        This forest-- 120 million years. Protected, so our touch is slight. Look
+        again: mosses springing void our step as if we are not here.
+      </p>
+    </div>
+    </div>
+  </div>
+  -->
+</section>
+
+<section id="dinosaurs" class="bg-light">
+  <div class="container pt-5">
+
+    <p>Ancestor trees conjured seeds when dinosaurs&ndash;</p>
+    <p>
+      Yes. Out of time, the yellow robins, fairywrens. Honeyeaters at their
+      promiscuous bloom.
+    </p>
+    <p>If we do not act?</p>
+
+    <div id="d3-1" class="d-flex justify-content-center"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/daintree_forest/assets/js/d3-example.js"></script>
+  </div>
+</section>
+
+
+<section id="scrolly">
+    <!-- https://russellsamora.github.io/scrollama/sticky-side/ -->
+    <article>
+      <div class="step" data-step="1">
+        <img class="img-fluid" src="/daintree_forest/assets/img/hamish-weir-q8Jb1md-8k8-unsplash.jpg" alt="">
+        <p>The falls</p>
+      </div>
+      <div class="step" data-step="2">
+        <img class="img-fluid" src="/daintree_forest/assets/img/zac-porter-tzA9aoQxp_8-unsplash.jpg" alt="">
+
+        <p>STEP 2</p>
+      </div>
+      <div class="step" data-step="3">
+        <img class="img-fluid" src="/daintree_forest/assets/img/kasia-derenda-2cxD8P_6WXU-unsplash.jpg" alt="">
+
+        <p>STEP 3</p>
+      </div>
+      <div class="step" data-step="4">
+        <img class="img-fluid" src="/daintree_forest/assets/img/kasia-derenda-DTG0w8TSP-g-unsplash.jpg" alt="">
+
+        <p>STEP 4</p>
+      </div>
+    </article>
+  
+    <figure>
+      <p>0</p>
+    </figure>
+  
+    <script>
+      var main = d3.select("main");
+          var scrolly = main.select("#scrolly");
+          var figure = scrolly.select("figure");
+          var article = scrolly.select("article");
+          var step = article.selectAll(".step");
+  
+          // initialize the scrollama
+          var scroller = scrollama();
+  
+          // generic window resize listener event
+          function handleResize() {
+              // 1. update height of step elements
+              var stepH = Math.floor(window.innerHeight * 0.75);
+              step.style("height", stepH + "px");
+  
+              var figureHeight = window.innerHeight / 2;
+              var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  
+              figure
+                  .style("height", figureHeight + "px")
+                  .style("top", figureMarginTop + "px");
+  
+              // 3. tell scrollama to update new element dimensions
+              scroller.resize();
+          }
+  
+          // scrollama event handlers
+          function handleStepEnter(response) {
+              console.log(response);
+              // response = { element, direction, index }
+  
+              // add color to current step only
+              step.classed("is-active", function (d, i) {
+                  return i === response.index;
+              });
+  
+              // update graphic based on step
+              figure.select("p").text(response.index + 1);
+          }
+  
+          function init() {
+  
+              // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+              handleResize();
+  
+              // 2. setup the scroller passing options
+              // 		this will also initialize trigger observations
+              // 3. bind scrollama event handlers (this can be chained like below)
+              scroller
+                  .setup({
+                      step: "#scrolly article .step",
+                      offset: 0.33,
+                      debug: false
+                  })
+                  .onStepEnter(handleStepEnter);
+          }
+  
+          // kick things off
+          init();
+    </script>
+  </section>
+
+<section id="" class="bg-dark text-light">
+    <div class="container mt-5 pt-5">
+        <p>
+            Here is a past so deep our mind meanders to an airy thinness where thoughts cannot form, a phantom rustle.  Our choice: this scape may surge and recompass a new world, so warm and damp persistently.  Stand by the ribbonwood, the languorous palm, imagine the quiet roll of eon upon eon come and gone; now look again, identical: the future. You and I a momentary seam and slightest fiction. Before we were and after this is.
+        </p>
+
+        <!-- https://trvswgnr.github.io/bs5-lightbox/#installation -->
+
+
+<div class="row" id="lightbox">
+	<a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+		<img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+	</a>
+	<a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+		<img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+	</a>
+	<a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+		<img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+	</a>
+</div>
+<div class="row">
+	<a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+		<img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+	</a>
+	<a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+		<img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+	</a>
+	<a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+		<img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+	</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+    </div>
+</section>
+
+<section id="trail" class="parralax">
+<div class="container text-light pt-5">
+    <p>A trail. </p>
+    <p>
+
+        The foot path to Mt. Sorrow. From there the shore, its azure slap primeval, and beneath that fulsome round a bygone adumbration stirs, till human voices wake it, and we drown. 
+        </p>
+        <p class="float-end">
+            <em>From the Pangia series Look Again.</em>
+        </p>
+</div>
+</section>
+
+<script src="/daintree_forest/assets/js/components.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script type="text/javascript">
+  new ScrollyVideo({
+    scrollyVideoContainer: "scrolly-video",
+    src: "/daintree_forest/assets/video/cliff.mp4",
+    cover: true,
+  });
+</script>
+
       </main>
 
     </div>

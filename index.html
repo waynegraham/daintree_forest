@@ -1,13 +1,128 @@
 ---
-layout: home
+layout: default
 title: Daintree Forest
 subtitle: A Walk
+author: Charles Henry
 ---
 
-<div id="map"></div>
-<div id="mapInset"></div>
-<div id="story"></div>
+<!-- 
+    https://github.com/russellsamora/scrollama 
+    https://github.com/dkaoster/scrolly-video
+    https://www.pexels.com/search/videos/rainforest/
+    https://trvswgnr.github.io/bs5-lightbox/#installation
 
-<script src="{{ '/assets/js/config.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/slides.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/chart.js' | relative_url }}"></script>
+-->
+<section id="intro" class="my-5 py-5">
+
+  <div class="container px-4 py-5 my-5">
+    <h1 class="display-5">{{ page.title }}</h1>
+    <h2 class="">{{ page.subtitle }}</h2>
+    <p>&ndash;by Charles Henry</p>
+
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Intro Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum facere excepturi, nam temporibus qui sapiente veniam animi dolore veritatis? Voluptatem itaque hic quibusdam quam sunt cum, numquam eius consequuntur!
+      </p>
+      <div class="my-5 py-5 d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="#scrolly-video">
+          <i class="bi bi-arrow-down fs-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="video-container" style="height: 300vh">
+  <div id="scrolly-video"></div>
+  <div class="card2">
+    <p>We are here, a green and drowsy light.</p>
+  </div>
+  <div class="card2">
+    <p>How old you think?</p>
+  </div>
+</div>
+
+
+<section id="forest" class="parralax py-5">
+
+  <div class="container my-5" >
+    <div class="bg-light bg-opacity-60 row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col p-3 p-lg-5 pt-lg-3">
+        <p class="lead">
+          This forest&ndash; 120 million years. Protected, so our touch is slight. Look
+          again: mosses springing void our step as if we are not here.
+        </p> 
+      </div>
+      
+    </div>
+  </div>
+<!--
+  <div class="container py-lg-5">
+    <div class="row py-lg-5">
+      <div class="col py-lg-5 my-lg-5">
+
+        <div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+
+      <p class="fs-1 text-light">
+        This forest-- 120 million years. Protected, so our touch is slight. Look
+        again: mosses springing void our step as if we are not here.
+      </p>
+    </div>
+    </div>
+  </div>
+  -->
+</section>
+
+<section id="dinosaurs" class="bg-light">
+  <div class="container pt-5">
+
+    <p>Ancestor trees conjured seeds when dinosaurs&ndash;</p>
+    <p>
+      Yes. Out of time, the yellow robins, fairywrens. Honeyeaters at their
+      promiscuous bloom.
+    </p>
+    <p>If we do not act?</p>
+
+    <div id="d3-1" class="d-flex justify-content-center"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="{{ '/assets/js/d3-example.js' | relative_url }}"></script>
+  </div>
+</section>
+
+{% include scrolly.html %}
+
+<section id="" class="bg-dark text-light">
+    <div class="container mt-5 pt-5">
+        <p>
+            Here is a past so deep our mind meanders to an airy thinness where thoughts cannot form, a phantom rustle.  Our choice: this scape may surge and recompass a new world, so warm and damp persistently.  Stand by the ribbonwood, the languorous palm, imagine the quiet roll of eon upon eon come and gone; now look again, identical: the future. You and I a momentary seam and slightest fiction. Before we were and after this is.
+        </p>
+
+        {% include carousel.html %}
+    </div>
+</section>
+
+<section id="trail" class="parralax">
+<div class="container text-light pt-5">
+    <p>A trail. </p>
+    <p>
+
+        The foot path to Mt. Sorrow. From there the shore, its azure slap primeval, and beneath that fulsome round a bygone adumbration stirs, till human voices wake it, and we drown. 
+        </p>
+        <p class="float-end">
+            <em>From the Pangia series Look Again.</em>
+        </p>
+</div>
+</section>
+
+<script src="{{ '/assets/js/components.js' | relative_url }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script type="text/javascript">
+  new ScrollyVideo({
+    scrollyVideoContainer: "scrolly-video",
+    src: "{{ '/assets/video/cliff.mp4' | relative_url }}",
+    cover: true,
+  });
+</script>
