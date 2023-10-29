@@ -106,10 +106,100 @@
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="/daintree_forest/assets/js/d3-example.js"></script>
-
-    
   </div>
 </section>
+
+
+<section id="scrolly">
+    <!-- https://russellsamora.github.io/scrollama/sticky-side/ -->
+    <article>
+      <div class="step" data-step="1">
+        <img class="img-fluid" src="/daintree_forest/assets/img/hamish-weir-q8Jb1md-8k8-unsplash.jpg" alt="">
+        <p>The falls</p>
+      </div>
+      <div class="step" data-step="2">
+        <img class="img-fluid" src="/daintree_forest/assets/img/zac-porter-tzA9aoQxp_8-unsplash.jpg" alt="">
+
+        <p>STEP 2</p>
+      </div>
+      <div class="step" data-step="3">
+        <img class="img-fluid" src="/daintree_forest/assets/img/kasia-derenda-2cxD8P_6WXU-unsplash.jpg" alt="">
+
+        <p>STEP 3</p>
+      </div>
+      <div class="step" data-step="4">
+        <img class="img-fluid" src="/daintree_forest/assets/img/kasia-derenda-DTG0w8TSP-g-unsplash.jpg" alt="">
+
+        <p>STEP 4</p>
+      </div>
+    </article>
+  
+    <figure>
+      <p>0</p>
+    </figure>
+  
+    <script>
+      var main = d3.select("main");
+          var scrolly = main.select("#scrolly");
+          var figure = scrolly.select("figure");
+          var article = scrolly.select("article");
+          var step = article.selectAll(".step");
+  
+          // initialize the scrollama
+          var scroller = scrollama();
+  
+          // generic window resize listener event
+          function handleResize() {
+              // 1. update height of step elements
+              var stepH = Math.floor(window.innerHeight * 0.75);
+              step.style("height", stepH + "px");
+  
+              var figureHeight = window.innerHeight / 2;
+              var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+  
+              figure
+                  .style("height", figureHeight + "px")
+                  .style("top", figureMarginTop + "px");
+  
+              // 3. tell scrollama to update new element dimensions
+              scroller.resize();
+          }
+  
+          // scrollama event handlers
+          function handleStepEnter(response) {
+              console.log(response);
+              // response = { element, direction, index }
+  
+              // add color to current step only
+              step.classed("is-active", function (d, i) {
+                  return i === response.index;
+              });
+  
+              // update graphic based on step
+              figure.select("p").text(response.index + 1);
+          }
+  
+          function init() {
+  
+              // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+              handleResize();
+  
+              // 2. setup the scroller passing options
+              // 		this will also initialize trigger observations
+              // 3. bind scrollama event handlers (this can be chained like below)
+              scroller
+                  .setup({
+                      step: "#scrolly article .step",
+                      offset: 0.33,
+                      debug: false
+                  })
+                  .onStepEnter(handleStepEnter);
+          }
+  
+          // kick things off
+          init();
+    </script>
+  </section>
 
 <section id="" class="bg-dark text-light">
     <div class="container mt-5 pt-5">
@@ -120,7 +210,7 @@
         <!-- https://trvswgnr.github.io/bs5-lightbox/#installation -->
 
 
-<div class="row">
+<div class="row" id="lightbox">
 	<a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
 		<img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
 	</a>
