@@ -24,8 +24,8 @@ author: Charles Henry
         Intro Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum facere excepturi, nam temporibus qui sapiente veniam animi dolore veritatis? Voluptatem itaque hic quibusdam quam sunt cum, numquam eius consequuntur!
       </p>
       <div class="my-5 py-5 d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="#scrolly-video">
-          <i class="bi bi-arrow-down fs-1"></i>
+        <a href="#scrolly-video" class="link-dark">
+          <i class="bi bi-arrow-down-circle" style="font-size:5rem;"></i>
         </a>
       </div>
     </div>
@@ -84,13 +84,18 @@ author: Charles Henry
     </p>
     <p>If we do not act?</p>
 
+    {% comment %}
     <div id="d3-1" class="d-flex justify-content-center"></div>
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="{{ '/assets/js/d3-example.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/d3-temperature.js' | relative_url }}"></script>
+    {% endcomment %}
+    <div class="d-flex justify-content-center">
+      {% include vega-lite.html %}
+    </div>
   </div>
 </section>
 
+<script src="https://d3js.org/d3.v7.min.js"></script>
 {% include scrolly.html %}
 
 <section id="" class="bg-dark text-light">
